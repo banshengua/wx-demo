@@ -1,0 +1,41 @@
+<!--index.wxml-->
+
+<view class="container">
+<view class="title"><image class="title-img" src="../image/avatar.jpg"></image>家庭记账本</view>
+<view class="add-wraper">
+<form bindsubmit="formSubmit" >
+  <picker class="form-picker"  bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      消费类型：{{array[index]}}
+    </view>
+  </picker>
+
+    <input  class="form-input" name="price" type="text" placeholder="请输入金额" />
+    <button class="form-btn"  formType="submit" type="primary" size="mini">添加</button>
+</form>
+</view>
+<view class="find-wraper">
+<form bindsubmit="findSubmit" >
+<view class="find-oldDate">
+  <picker mode="date" value="{{oldDate}}" start="2018-03-01" end="2020-09-01" bindchange="oldDate">
+    <view class="picker">
+      点击选择日期: {{oldDate}}
+    </view>
+  </picker>
+</view>
+ <view class="find-text">至</view>
+<view class="find-newDate">
+  <picker mode="date" value="{{newDate}}" start="2018-03-01" end="2020-09-01" bindchange="newDate">
+    <view class="picker">
+      点击选择日期: {{newDate}}
+    </view>
+  </picker>
+</view>
+ <button class="form-btn"  formType="submit" type="primary" size="mini">查询</button>
+</form>
+</view>
+<view class='statis-wraper'>
+<canvas canvas-id="pieCanvas" disable-scroll="true" class="canvas"></canvas>
+</view>
+<view class="message"></view>
+</view>

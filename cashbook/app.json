@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/index",
+    "pages/joke/joke",
+    "pages/person/person"
+  ],
+  "window": {
+    "navigationBarTitleText": "记账本"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"pages/image/1.png",
+        "selectedIconPath":"pages/image/1-1.png",
+        "text": "记账"
+      },
+      {
+        "pagePath": "pages/joke/joke",
+        "iconPath": "pages/image/2-1.png",
+        "selectedIconPath": "pages/image/2.png",
+        "text": "笑话"
+      },
+      {
+        "pagePath": "pages/logs/index",
+        "iconPath": "pages/image/3.png",
+        "selectedIconPath": "pages/image/3-1.png",
+        "text": "个人"
+      }
+    ],
+    "backgroundColor":"white",
+    "selectedColor":"#E066FF"
+  }
+}
